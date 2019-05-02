@@ -51,7 +51,7 @@ void build(int sx, int sy, int sz, int ex, int ey, int ez)
 	//x,y,z좌표의 평균 좌표 
 	int mx = (ex + sx) / 2;
 	int my = (ey + sy) / 2;
-	int mz = (ez + ey) / 2;
+	int mz = (ez + sz) / 2;
 
 
 	//x,y,z중 좌표가 겹칠경우 예외처리하고 건물 생성 하지 않는다.
@@ -93,7 +93,7 @@ void build(int sx, int sy, int sz, int ex, int ey, int ez)
 			//ex 또는 ez값이 바뀌면서 평균 좌표의 재정의  
 			mx = (ex + sx) / 2;
 			my = (ey + sy) / 2;
-			mz = (ez + ey) / 2;
+			mz = (ez + sz) / 2;
 
 
 			//건물을 만듦
