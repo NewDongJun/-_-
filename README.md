@@ -37,6 +37,7 @@ main 함수에서는 매크로 함수를 사용해서 크기에 따라서 좌표
 	void fillBlockXYZ(BlockID block, int sx, int sy, int sz, int ex, int ey, int ez)
 	{
 		for (int x = sx; x <= ex; x++) {
+## 2.3.1
 			for (int y = sy; y <= ey; y++) {
 				for (int z = sz; z <= ez; z++) {
 					locateBlock(block, x, y, z);
@@ -44,6 +45,10 @@ main 함수에서는 매크로 함수를 사용해서 크기에 따라서 좌표
 			}
 		}
 	}
+	
+## 2.4 build 함수
+
+	
 	
 
 
