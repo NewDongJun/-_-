@@ -92,7 +92,7 @@ void build(int sx, int sy, int sz, int ex, int ey, int ez)
 
 
 		//just 피라미드  //이게 젤 어렵네 //ㅇ아아아아아아아앙
-		else if (xlen < 11)
+		else if (xlen < 16)
 		{
 			int z;  //블록이 공간을 넘어가지 않기위해 만든 변수 k가    z는 짧은 거의 차 나누기 2
 			int len;
