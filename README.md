@@ -4,12 +4,14 @@
 # 2.함수 구성 
 ## 2.1 매크로 함수
 '''c
+
 #define SWAP(s,e)			{int t=s; s=e; e=t;}
 '''
 데이터를 크기에 따라 바꿔주는 함수
 
 ## 2.2 main 함수
 '''c
+
 int main()
 {
 	int sx, sy, sz, ex, ey, ez;
