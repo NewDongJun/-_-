@@ -6,10 +6,6 @@
 #pragma comment(lib, "CoalaMOD.lib")
 
 
-// 입력받은 좌표로 구성하는 공간을 블록으로 꽉 채우는 함수
-void fillBlockXYZ(BlockID block, int sx, int sy, int sz, int ex, int ey, int ez);
-
-
 //건물을 생성하는 함수     //하얗게 불태웠다.
 void build(int sx, int sy, int sz, int ex, int ey, int ez);
 
@@ -33,18 +29,6 @@ int main()
 	return 0;
 }
 
-// 입력받은 좌표로 구성하는 공간을 블록으로 꽉 채우는 함수
-void fillBlockXYZ(BlockID block, int sx, int sy, int sz, int ex, int ey, int ez)
-{
-	for (int x = sx; x <= ex; x++) {
-		for (int y = sy; y <= ey; y++) {
-			for (int z = sz; z <= ez; z++) {
-				locateBlock(block, x, y, z);
-			}
-		}
-	}
-}
-
 
 //건물을 생성하는 함수     //하얗게 불태웠다.
 void build(int sx, int sy, int sz, int ex, int ey, int ez)
@@ -58,8 +42,6 @@ void build(int sx, int sy, int sz, int ex, int ey, int ez)
 	BlockID diamond = createBlock(BLOCK_DIAMOND);
 
 	DoorID door = createDoor(DOOR_OAK);
-
-	fillBlockXYZ(air, sz, sy, sz, ex, ey, ez);  //공간을 air로 가득 채움
 
 	//축별 좌표의 차 
 	int xlen = ex - sx;
