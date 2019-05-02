@@ -10,9 +10,10 @@
 데이터를 크기에 따라 바꿔주는 함수
 
 ## 2.2 main 함수
-'''c
 
 
+	int main(){
+	
 	int sx, sy, sz, ex, ey, ez;
 	printf("두개의 좌표를 입럭하시오. 예시: x1 y1 z1 x2 y2 z2 \n");
 	scanf("%d %d %d %d %d %d", &sx, &sy, &sz, &ex, &ey, &ez);
@@ -27,7 +28,7 @@
 	build(sx, sy, sz, ex, ey, ez);
 
 	return 0;
+	}
 
-'''
 
 
