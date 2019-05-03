@@ -98,7 +98,7 @@ void build(int sx, int sy, int sz, int ex, int ey, int ez)
 
 			//건물을 만듦
 			int k = 0;
-			for (int i = ey - 1; i >= sy; i--) {
+			for (int i = ey ; i >= sy; i--) {
 
 				if (k > z) k--;  //블록이 좌표를 넘어가지 않도록 k값 증가를 막음
 
@@ -116,7 +116,7 @@ void build(int sx, int sy, int sz, int ex, int ey, int ez)
 
 			//건물 안쪽을 air을 채워서 비워줌 
 			k = 0;
-			for (int i = ey - 2; i >= sy; i--) {
+			for (int i = ey - 1; i >= sy; i--) {
 
 				if (k > z - 1) k--;  //블록이 좌표를 넘어가지 않도록 k값 증가를 막음
 
@@ -135,10 +135,10 @@ void build(int sx, int sy, int sz, int ex, int ey, int ez)
 
 			//공기를 채워서 입구 만들기 
 
-			locateBlock(air, mx, sy, mz - len);
-			locateBlock(air, mx, sy + 1, mz - len);
-			locateBlock(air, mx, sy, mz - len + 1);
-			locateBlock(air, mx, sy + 1, mz - len + 1);
+			locateBlock(air, mx, sy, sz);
+			locateBlock(air, mx, sy + 1, sz);
+			locateBlock(air, mx, sy, sz + 1);
+			locateBlock(air, mx, sy + 1, sz + 1);
 
 			//installDoor(door, mx, sy, mx - len, FACING_NORTH);
 		}
@@ -187,7 +187,7 @@ void build(int sx, int sy, int sz, int ex, int ey, int ez)
 
 
 
-		//대형 구조물  아아앙아 math.h 좀 써서 좀 근사한거좀 만들어 볼려 했는데 수학을 못하네 ㅠㅠ 라이브러리를 쓸줄 몰라 ㅠㅠ
+		//대형 구조물  math.h 좀 써서 좀 근사한거좀 만들어 볼려 했는데 수학을 못하네 ㅠㅠ 라이브러리를 쓸줄 몰라 ㅠㅠ
 		else
 		{
 			int min = xlen;
